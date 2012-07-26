@@ -1,0 +1,12 @@
+{application, sacudiendo_la_cabeza,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { sacudiendo_la_cabeza_app, []}},
+  {env, []}
+ ]}.
