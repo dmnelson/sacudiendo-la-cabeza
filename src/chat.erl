@@ -3,7 +3,7 @@
 -include_lib("exmpp/include/exmpp.hrl").
 -include_lib("exmpp/include/exmpp_client.hrl").
 
--export([start/0, start/2, stop/1]).
+-export([start/2, stop/1]).
 -export([init/2]).
 
 start(User, Password) ->
