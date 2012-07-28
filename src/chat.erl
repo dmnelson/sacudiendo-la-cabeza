@@ -6,9 +6,6 @@
 -export([start/0, start/2, stop/1]).
 -export([init/2]).
 
-start() ->
-  start("sacudiendo.la.cabeza@gmail.com", "Pato2Patas").
-
 start(User, Password) ->
   spawn(?MODULE, init, [User, Password]).
 
@@ -43,7 +40,6 @@ loop(Session, UsersOnline) ->
       io:format("Received Presence stanza:~n~p~n~n", [Record]),
       loop(Session, [Record#received_packet.from | UsersOnline]);
     Record ->
-      %io:format("Received a stanza:~n~p~n~n", [Record]),
       loop(Session, UsersOnline)
   end.
 
